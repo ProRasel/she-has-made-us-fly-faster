@@ -1,0 +1,93 @@
+/* CSS Section */
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('bgc.png');
+    background-size: contain;
+    background-position: 210px 182px;
+    font-family: 'Arial', sans-serif;
+}
+#scene {
+    position: absolute;
+    width: 200%; /* Make the scene wider to allow for movement */
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Adjust other element positions relative to #scene if necessary */
+#ground, #runway {
+    position: absolute;
+    width: 100%;
+}
+
+#ground {
+    bottom: 0;
+    height: 100px;
+    background-color: #c9caca;
+}
+
+#runway {
+    bottom: 100px;
+    height: 20px;
+    background: linear-gradient(to right, #444, #666);
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+}
+
+.vehicle, #girl {
+    position: absolute;
+    bottom: 118px;
+}
+
+#car {
+    left: -150px;
+    width: 193px;
+    height: 75px;
+    background-image: url('bmw.png');
+    background-size: cover;
+}
+
+#airplane {
+    position: absolute;
+    bottom: 335px;
+    width: 340px;
+    height: 125px;
+    background-image: url('airplane.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 99;
+}
+
+#girl {
+    position: absolute;
+    bottom: 118px;
+    left: -30px;
+    width: 90px;
+    height: 85px;
+    background-image: url('hasina.png');
+    background-size: contain;
+    z-index: 100; /* Ensure girl is above the airplane */
+}
+#kader_img {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    font-size: 36px;
+    color: #ff0000;
+    opacity: 0;
+    transition: opacity 1s ease-in, transform 1s ease-in;
+}
+.particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: rgba(141, 140, 140, 0.5);
+    border-radius: 50%;
+  }
+  .car-particle {
+    background-color: rgba(52, 51, 51, 0.5);
+  }
+  .airplane-particle {
+    background-color: rgba(180, 178, 178, 0.5);
+  }
